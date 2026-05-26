@@ -1,7 +1,7 @@
 package service;
 
 public class ComboService {
-    private static final long COMBO_INTERVAL=2000;//combo时间2秒
+    private static final long COMBO_INTERVAL=3000;//combo时间2秒
     private int combo;
     private long lastMatchTime;
     public ComboService(){

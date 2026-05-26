@@ -19,7 +19,7 @@ public class ScoreService {
         if(value<0){
             return;
         }
-        score-=score;
+        score-=value;
         if(score<0){
             score=0;
         }
