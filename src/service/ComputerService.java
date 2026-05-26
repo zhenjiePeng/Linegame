@@ -1,5 +1,6 @@
 package service;
 import model.Board;
+import model.ComputerDifficulty;
 import model.Tile;
 
 import java.util.Random;
@@ -117,5 +118,27 @@ public class ComputerService {
             return;
         }
         skillProbability = probability;
+    }
+    public void setDifficulty(ComputerDifficulty difficulty) {
+        if (difficulty == null) {
+            return;
+        }
+        switch (difficulty) {
+            case EASY:
+                minThinkTime = 1500;
+                maxThinkTime = 3000;
+                skillProbability = 0.1;
+                break;
+            case NORMAL:
+                minThinkTime = 700;
+                maxThinkTime = 1500;
+                skillProbability = 0.2;
+                break;
+            case HARD:
+                minThinkTime = 200;
+                maxThinkTime = 700;
+                skillProbability = 0.4;
+                break;
+        }
     }
 }
